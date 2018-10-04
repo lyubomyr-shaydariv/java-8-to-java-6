@@ -2,8 +2,6 @@ package test;
 
 import java.util.stream.Stream;
 
-import static java.lang.System.out;
-
 public final class EntryPoint {
 
 	private EntryPoint() {
@@ -14,13 +12,13 @@ public final class EntryPoint {
 	}
 
 	private static void runAs(final String name, final Runnable runnable) {
-		out.println("pre: " + name);
+		System.out.println("pre: " + name);
 		runnable.run();
 		out.println("post: " + name);
 	}
 
 	private static void dump(final Object o) {
-		out.println(">" + o);
+		System.out.println(">" + o);
 	}
 
 }
